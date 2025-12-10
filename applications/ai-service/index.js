@@ -10,7 +10,7 @@ const localLLM = require("./localLLM");
 const app = express();
 app.use(express.json());
 
-const PORT = parseInt(process.env.PORT || "5000", 10);
+const PORT = parseInt(process.env.PORT || "9000", 10);
 const SERVICE_JWT_SECRET = process.env.SERVICE_JWT_SECRET || "service_secret_example";
 const REDIS_URL = process.env.REDIS_URL || "redis://127.0.0.1:6379";
 
@@ -28,7 +28,7 @@ sub.on("message", async (channel, message) => {
   }
 });
 
-app.post("/health", (req, res) => res.json({ ok: true, service: "ai-service" }));
+app.get("/health", (req, res) => res.json({ ok: true, service: "ai-service" }));
 
 // sync endpoint for gateway
 app.post("/ai", async (req, res) => {

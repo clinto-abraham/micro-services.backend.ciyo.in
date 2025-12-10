@@ -18,9 +18,9 @@ This is a combination of node and go-lang backend programms coupled around with 
 4. # Microservices Application 
 
 Ports:
-- Gateway: 2000
-- User: 3000
-- API (Mongo): 4000
+- API-Gateway: 2000
+- User (Postgres): 3000
+- Data (Mongo): 4000
 - AI: 5000
 - WebSocket: 6000
 - Cron: 7000
@@ -51,5 +51,7 @@ Run locally (recommended on Mac M1 with Homebrew DBs):
 - Services validate internal token header `X-Internal-Token` signed with `SERVICE_JWT_SECRET`.
 - AI service supports OpenAI and local LLM.
 - WebSocket service uses Socket.IO.
-10. `chmod +x start-all.sh`
+10. `chmod +x ./start-all.sh`
     `./start-all.sh`
+11. Backend api link: https://happier-bertie-scratchless.ngrok-free.dev/
+    

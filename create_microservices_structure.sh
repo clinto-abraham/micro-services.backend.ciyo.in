@@ -65,21 +65,21 @@ create_folder "$ROOT"
 # -----------------------------
 # Gateway Service (PORT 2000)
 # -----------------------------
-create_folder "$ROOT/gateway"
-create_file   "$ROOT/gateway/package.json"
-create_file   "$ROOT/gateway/index.js"
+create_folder "$ROOT/api-gateway"
+create_file   "$ROOT/api-gateway/package.json"
+create_file   "$ROOT/api-gateway/index.js"
 
 # Security folder
-create_folder "$ROOT/gateway/security"
-create_file   "$ROOT/gateway/security/spikeProtector.js"
-create_file   "$ROOT/gateway/security/aiTrafficGuard.js"
-create_file   "$ROOT/gateway/security/rateLimiter.js"
+create_folder "$ROOT/api-gateway/security"
+create_file   "$ROOT/api-gateway/security/spikeProtector.js"
+create_file   "$ROOT/api-gateway/security/aiTrafficGuard.js"
+create_file   "$ROOT/api-gateway/security/rateLimiter.js"
 
 # Middleware folder
-create_folder "$ROOT/gateway/middleware"
-create_file   "$ROOT/gateway/middleware/internalAuth.js"
+create_folder "$ROOT/api-gateway/middleware"
+create_file   "$ROOT/api-gateway/middleware/internalAuth.js"
 
-create_file   "$ROOT/gateway/.env.example"
+create_file   "$ROOT/api-gateway/.env.example"
 
 
 # -----------------------------
