@@ -54,4 +54,24 @@ Run locally (recommended on Mac M1 with Homebrew DBs):
 10. `chmod +x ./start-all.sh`
     `./start-all.sh`
 11. Backend api link: https://happier-bertie-scratchless.ngrok-free.dev/
+
+
+
+
+| Requirement         | SQL (Postgres/MySQL) | MongoDB |
+| ------------------- | -------------------- | ------- |
+| Financial data      | ✅ REQUIRED           | ❌       |
+| Payments            | ✅                    | ❌       |
+| Transactions        | ✅                    | ❌       |
+| User auth           | ✅                    | ❌       |
+| Strong consistency  | ✅                    | ❌       |
+| Relations & joins   | ✅                    | ❌       |
+| Auditing            | ✅                    | ❌       |
+| Schema flexibility  | ❌                    | ✅       |
+| Logs / events       | ❌                    | ✅       |
+| User activity       | ❌                    | ✅       |
+| Notifications       | ❌                    | ✅       |
+| Metadata            | ❌                    | ✅       |
+| Rapid schema change | ❌                    | ✅       |
+
     
