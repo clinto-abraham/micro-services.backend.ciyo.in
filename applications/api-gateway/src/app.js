@@ -7,7 +7,7 @@ const spikeProtector = require("./security/spikeProtector");
 const rateLimiter = require("./security/rateLimiter");
 const aiTrafficGuard = require("./security/aiTrafficGuard");
 
-const authMiddleware = require("./middlewares/auth.middleware");
+// const authMiddleware = require("./middlewares/auth.middleware");
 const loggerMiddleware = require("./middlewares/logger.middleware");
 const healthMiddleware = require("./middlewares/health.middleware");
 
@@ -27,7 +27,7 @@ app.use(rateLimiter);
 app.use(aiTrafficGuard);
 
 app.use(loggerMiddleware);
-app.use(authMiddleware);
+// app.use(authMiddleware);
 app.use(healthMiddleware);
 
 setupSwagger(app);

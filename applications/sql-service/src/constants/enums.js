@@ -1,0 +1,8 @@
+// src/constants/enums.js
+module.exports = {
+  PRODUCT_CATEGORY: ['MUSHROOM', 'PELLETS', 'MYCELIUM'],
+  CART_STATUS: ['ACTIVE', 'CHECKED_OUT', 'ABANDONED'],
+  ADDRESS_TYPE: ['HOME', 'WORK', 'OTHER'],
+  TWO_FA_METHOD: ['EMAIL', 'SMS', 'APP'],
+  ROOM_STATUS: ['AVAILABLE', 'BOOKED', 'MAINTENANCE']
+};

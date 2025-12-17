@@ -1,6 +1,7 @@
 "use strict";
 
-const { pub } = require("../redis/client");
+const { initRedis } = require("../redis/redis.client");
+const { redis, pub, sub } = initRedis();
 
 async function joinRoom(ws, roomId) {
   ws.roomId = roomId;

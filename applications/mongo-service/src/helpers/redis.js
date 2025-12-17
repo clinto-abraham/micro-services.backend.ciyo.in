@@ -9,7 +9,7 @@ require("dotenv").config({
   path: path.resolve(__dirname, "../.env"), // load the .env in service root
 });
 // Use environment value or fallback
-const REDIS_URL = process.env.REDIS_URL || "redis://127.0.0.1:6379";
+const REDIS_URL = process.env.REDIS_URL || "redis://:redisIsStartedOnDec15Of2025@127.0.0.1:6379";
 
 const redis = new Redis(REDIS_URL, {
   retryStrategy(times) {

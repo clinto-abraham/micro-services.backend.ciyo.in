@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { OPENAI_API_KEY } = require("../../config/env");
+const { OPENAI_API_KEY } = require("../../configs/env");
 
 exports.chat = async prompt => {
   // MOCK SAFE (replace later with real call)

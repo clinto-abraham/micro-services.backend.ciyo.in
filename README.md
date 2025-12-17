@@ -55,8 +55,10 @@ Run locally (recommended on Mac M1 with Homebrew DBs):
     `./start-all.sh`
 11. Backend api link: https://happier-bertie-scratchless.ngrok-free.dev/
 
-
-
+12. `pm2 stop all`
+    `pm2 delete all`
+    `pm2 start ecosystem.config.js --env production`
+    `pm2 save`
 
 | Requirement         | SQL (Postgres/MySQL) | MongoDB |
 | ------------------- | -------------------- | ------- |
@@ -74,4 +76,12 @@ Run locally (recommended on Mac M1 with Homebrew DBs):
 | Metadata            | ❌                    | ✅       |
 | Rapid schema change | ❌                    | ✅       |
 
-    
+13. PM2 Commands:
+pm2 start ecosystem.config.js --only api-gateway --env production
+pm2 start ecosystem.config.js --only sql-service --env production
+pm2 start ecosystem.config.js --only mongo-service --env production
+pm2 start ecosystem.config.js --only ai-service --env production
+pm2 start ecosystem.config.js --only websocket-service --env production
+pm2 start ecosystem.config.js --only cron-service --env production
+pm2 start ecosystem.config.js --only payment-service --env production
+pm2 start ecosystem.config.js --only mail-service --env production

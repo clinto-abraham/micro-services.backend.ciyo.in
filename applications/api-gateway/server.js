@@ -1,12 +1,20 @@
 "use strict";
-require("dotenv").config();
+require("./src/configs/env");
 
 const app = require("./src/app");
 
 const PORT = process.env.PORT || 2000;
 
-app.listen(PORT, () => {
-  console.log(`🚀 API Gateway running on port ${PORT}`);
+const server = app.listen(PORT, () => {
+  console.log(` 🚀 API Gateway running on port ${PORT}`);
 });
 
+process.on("unhandledRejection", (err) => {
+  console.error("Unhandled Rejection:", err);
+  server.close(() => process.exit(1));
+});
 
+process.on("SIGTERM", () => {
+  console.log("SIGTERM received. Shutting down...");
+  server.close(() => process.exit(0));
+});

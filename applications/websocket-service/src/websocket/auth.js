@@ -5,13 +5,17 @@ const url = require("url");
 function authenticate(req) {
   const { query } = url.parse(req.url, true);
 
-  if (!query.userId) {
-    throw new Error("Unauthorized");
+  // Example: ws://localhost:6000?userId=123
+  const userId = query.userId;
+
+  if (!userId) {
+    throw new Error("Missing userId");
   }
 
   return {
-    id: query.userId
+    id: String(userId)
   };
 }
 
 module.exports = { authenticate };
+

@@ -1,9 +1,11 @@
+const { JWT_SECRET, JWT_EXPIRES_IN, JWT_REFRESH_EXPIRES_IN } = require("./env");
+
 module.exports = {
-  secret: process.env.JWT_SECRET,
+  secret: JWT_SECRET,
   accessToken: {
-    expiresIn: process.env.JWT_EXPIRES_IN || "15m"
+    expiresIn: JWT_EXPIRES_IN || "15m"
   },
   refreshToken: {
-    expiresIn: process.env.JWT_REFRESH_EXPIRES_IN || "7d"
+    expiresIn: JWT_REFRESH_EXPIRES_IN || "7d"
   }
 };

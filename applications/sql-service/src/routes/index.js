@@ -4,6 +4,7 @@ const auth = require("../middlewares/auth.middleware");
 
 const userController = require("../controllers/user.controller");
 const userValidation = require("../validations/user.validation");
+const healthController = require("../controllers/health.controller");
 
 const router = express.Router();
 
@@ -12,13 +13,8 @@ const router = express.Router();
  * Health Check (LB / Gateway)
  * ---------------------------
  */
-router.get("/health", (req, res) => {
-  return res.status(200).json({
-    status: "UP",
-    service: "user-service",
-    timestamp: new Date().toISOString()
-  });
-});
+router.get("/health", healthController.health);
+
 
 /**
  * ---------------------------

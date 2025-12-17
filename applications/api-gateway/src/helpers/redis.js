@@ -3,7 +3,7 @@
 // const Redis = require("ioredis");
 // const logger = require("../configs/logger");
 
-// const REDIS_URL = process.env.REDIS_URL || "redis://127.0.0.1:6379";
+// const REDIS_URL = process.env.REDIS_URL || "redis://:redisIsStartedOnDec15Of2025@127.0.0.1:6379";
 
 // const redisClient = new Redis(REDIS_URL, {
 //   retryStrategy(times) {
@@ -60,7 +60,7 @@
 // // const Redis = require("ioredis");
 // // const logger = require("../configs/logger");
 
-// // const REDIS_URL = process.env.REDIS_URL || "redis://127.0.0.1:6379";
+// // const REDIS_URL = process.env.REDIS_URL || "redis://:redisIsStartedOnDec15Of2025@127.0.0.1:6379";
 
 // // const redis = new Redis(REDIS_URL, {
 // //   retryStrategy(times) {

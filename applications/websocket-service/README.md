@@ -30,3 +30,19 @@ websocket-service/
 ├── package.json
 ├── .env.example
 └── README.md
+
+
+
+src/
+├── server.js          # entry point
+├── http.js            # HTTP + health
+├── websocket/
+│   ├── index.js       # WS init
+│   ├── router.js      # ← YOUR CODE LIVES HERE
+│   ├── auth.js
+│   └── connection.js
+│
+├── handlers/
+│   ├── chat.handler.js
+│   ├── payment.handler.js
+│   └── notification.handler.js

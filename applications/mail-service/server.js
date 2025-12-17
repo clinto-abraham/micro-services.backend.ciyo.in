@@ -1,9 +1,21 @@
 "use strict";
+require("./src/configs/env");
 
-require("dotenv").config();
+const app = require("./src/app");
 
-const app = require("./app");
+const PORT = process.env.PORT || 9000;
 
-app.listen(8500, () => {
-  console.log("📨 Mail service running on 9000");
+
+const server = app.listen(PORT, () => {
+  console.log(` 📨 Mail service running on ${PORT}`);
+});
+
+process.on("unhandledRejection", (err) => {
+  console.error("Unhandled Rejection:", err);
+  server.close(() => process.exit(1));
+});
+
+process.on("SIGTERM", () => {
+  console.log("SIGTERM received. Shutting down...");
+  server.close(() => process.exit(0));
 });

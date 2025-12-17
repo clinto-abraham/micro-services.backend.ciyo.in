@@ -1,0 +1,33 @@
+<mjml>
+  <mj-body background-color="#f9f9f9">
+
+    {{> header}}
+
+    <mj-section>
+      <mj-column>
+
+        <mj-text font-size="18px">
+          Hello {{name}},
+        </mj-text>
+
+        <mj-text>
+          This is a trial email from {{appName}}.
+        </mj-text>
+
+        {{#if otp}}
+          <mj-text font-size="22px" color="#0d6efd">
+            OTP: <strong>{{otp}}</strong>
+          </mj-text>
+        {{/if}}
+
+        <mj-text>
+          Thanks for testing our mail service 🚀
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    {{> footer}}
+
+  </mj-body>
+</mjml>

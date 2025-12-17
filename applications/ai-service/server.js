@@ -1,6 +1,8 @@
 "use strict";
+require("./src/configs/env");
 
-const { PORT } = require("./src/config/env");
+const PORT = process.env.PORT;
+
 const app = require("./src/app");
 require("./src/queues/ai.worker");
 

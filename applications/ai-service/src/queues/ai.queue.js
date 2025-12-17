@@ -1,4 +1,4 @@
 const { Queue } = require("bullmq");
-const config = require("../config/queue.config");
+const config = require("../configs/queue.config");
 
 module.exports = new Queue("ai-jobs", config);

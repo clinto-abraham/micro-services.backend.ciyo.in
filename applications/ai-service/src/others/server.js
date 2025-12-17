@@ -12,7 +12,7 @@
 
 // const PORT = parseInt(process.env.PORT || "9000", 10);
 // const SERVICE_JWT_SECRET = process.env.SERVICE_JWT_SECRET || "service_secret_example";
-// const REDIS_URL = process.env.REDIS_URL || "redis://127.0.0.1:6379";
+// const REDIS_URL = process.env.REDIS_URL || "redis://:redisIsStartedOnDec15Of2025@127.0.0.1:6379";
 
 // const { pub, sub } = createPubSub(REDIS_URL);
 

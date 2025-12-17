@@ -1,0 +1,5 @@
+"use strict";
+module.exports = {
+  PAYMENT_REMINDER: "PAYMENT_REMINDER",
+  INACTIVE_USERS: "INACTIVE_USERS"
+};

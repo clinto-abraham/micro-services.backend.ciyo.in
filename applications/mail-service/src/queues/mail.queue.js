@@ -1,6 +1,8 @@
 "use strict";
 
 const { Queue } = require("bullmq");
-const connection = require("../config/redis");
+const createRedisClient = require("../configs/redis");
+const connection = createRedisClient();
 
 module.exports = new Queue("mail-queue", { connection });
+

@@ -1,17 +1,22 @@
 {
   "name": "cron-service",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "type": "commonjs",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "NODE_ENV=development nodemon server.js",
+    "test": "NODE_ENV=test node server.js",
+    "stage": "NODE_ENV=stage node server.js",
+    "prod": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "axios": "^1.4.0",
+    "bullmq": "^5.66.0",
     "dotenv": "^16.3.1",
     "express": "^5.2.1",
     "ioredis": "^5.3.2",
-    "node-cron": "^3.0.2"
+    "node-cron": "^3.0.2",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"

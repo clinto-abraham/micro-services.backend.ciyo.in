@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const { INTERNAL_JWT_SECRET } = require("../config/env");
+const { INTERNAL_JWT_SECRET } = require("../configs/env");
 
 module.exports = (req, res, next) => {
   const token = req.headers["x-internal-token"];

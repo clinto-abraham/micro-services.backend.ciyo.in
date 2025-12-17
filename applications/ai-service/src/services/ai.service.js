@@ -1,5 +1,5 @@
 const providers = require("./llm");
-const config = require("../config/ai.config");
+const config = require("../configs/ai.config");
 const events = require("./event.service");
 
 exports.process = async ({ prompt, userId }) => {
